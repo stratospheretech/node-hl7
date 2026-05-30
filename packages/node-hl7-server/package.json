@@ -1,6 +1,6 @@
 {
   "name": "@synapsecloud/node-hl7-server",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "Node.js client library for creating a HL7 Server which can accept incoming a properly formatted HL7 message(s), and then parses the HL7 message. Once the message has been parsed you can then do something with the final result that you so desire.",
   "keywords": [
     "hl7",
@@ -23,13 +23,13 @@
   "author": "Shane Froebel",
   "exports": {
     ".": {
-      "types": "./lib/types/index.d.ts",
+      "types": "./lib/types/index.d.mts",
       "import": "./lib/esm/index.mjs",
       "require": "./lib/cjs/index.js",
       "default": "./lib/cjs/index.js"
     },
     "./src": {
-      "types": "./src/index.ts",
+      "types": "./src/index.mts",
       "default": "./src/index.ts"
     },
     "./src/*": {
@@ -39,7 +39,7 @@
   },
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.mjs",
-  "types": "./lib/types/index.d.ts",
+  "types": "./lib/types/index.d.mts",
   "files": [
     "lib/",
     "README.md",
