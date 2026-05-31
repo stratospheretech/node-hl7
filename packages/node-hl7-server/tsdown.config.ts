@@ -1,4 +1,5 @@
 import { defineConfig } from "tsdown";
+import { fileURLToPath } from "node:url";
 
 const sourcemap = process.env.NODE_ENV === "development";
 
@@ -13,6 +14,9 @@ export default defineConfig([
     minify: !sourcemap,
     sourcemap: sourcemap,
     target: "esnext",
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    }
   },
   {
     entry: ["src/index.ts"],
@@ -23,6 +27,9 @@ export default defineConfig([
     minify: !sourcemap,
     sourcemap: sourcemap,
     target: "esnext",
+    alias: {
+      "@": "./src",
+    }
   },
   {
     entry: ["src/index.ts"],
@@ -30,5 +37,8 @@ export default defineConfig([
     dts: {
       only: true,
     },
+    alias: {
+      "@": "./src",
+    }
   },
 ]);

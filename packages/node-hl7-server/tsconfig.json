@@ -3,7 +3,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "node-hl7-client": ["../node-hl7-client/src/index.ts"],
+//      "node-hl7-client": ["../node-hl7-client/src/index.ts"],
     }
   },
   "include": ["src", "../../__tests__/server"]
